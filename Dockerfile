@@ -4,3 +4,5 @@ ADD https://cdn.jsdelivr.net/gh/mlocati/docker-php-extension-installer/install-p
 
 RUN chmod uga+x /usr/local/bin/install-php-extensions && sync \
     && install-php-extensions bcmath bz2 calendar ctype curl dba dom enchant exif fileinfo filter ftp gd gettext gmp hash iconv imap interbase intl json ldap mbstring mcrypt mysqli opcache pcntl pdo pdo_dblib pdo_mysql phar posix pspell readline recode reflection session shmop simplexml snmp soap sockets spl standard tidy tokenizer wddx xml xmlreader xmlrpc xmlwriter xsl zip redis
+
+CMD [ "php-fpm" ]
